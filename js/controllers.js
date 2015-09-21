@@ -3,20 +3,23 @@ controller('portfolioController', function($scope) {
     //$scope.driversList = [];
 });*/
 
+var app = angular.module('PortfolioApp', []); //'ngRoute' is gonna go in the brackets
 
-var portfolioController = function($scope){
-};
+app.controller('contentController', [function() {
 
-var navController = function($scope){
-	$scope.links =[
+}]);
+
+
+app.controller('navController', [function() {
+	this.links =[
 		{linkName: 'About',
-		URL: '',
+		URL: '/about',
 		},
 		{linkName: 'Resume',
-		URL: '',
+		URL: '/resume',
 		},
 		{linkName: 'Projects',
-		URL: '',
+		URL: '/projects',
 		}
 	]
-};
+}]);
