@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="PortfolioApp" >
 <head>
 	<title>
@@ -8,19 +9,26 @@
 <!--nav goes across the top--> <!--about, resume, projects-->
 <!--each of these sections is its own thing, its own view-->
 <!--within projects we have a sub menu with each project and those scroll as views-->
-<!--can we have views within views?-->
+<!--can we have views within views? Yes! You can..-->
 
-<div ng-controller="navController" ></div>
-<div ng-controller="portfolioController"></div>
+	<p>Hello world!</p>
+<div ng-controller="navController as nav" >
+	<div ng-repeat="link in nav.links">
+		<a href="{{link.URL}}">{{link.linkName}}</a>
+	</div>
+</div>
+
+<div ng-controller="contentController as content"></div>
 
 
 
 
 </body>
 
-<!--scripts go here--!>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js" />
-<script src="
+<!--scripts go here-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+<!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script-->
+<script src="js/controllers.js"></script>
 
 
 </html>
