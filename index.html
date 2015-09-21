@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="PortfolioApp" >
 <head>
+	<meta charset="utf-8"/>
 	<title>
 		Sara Cagle Portfolio
 	</title>
@@ -12,11 +13,13 @@
 <!--can we have views within views? Yes! You can..-->
 
 	<p>Hello world!</p>
+	<!--div ng-view></div-->
 <div ng-controller="navController as nav" >
 	<div ng-repeat="link in nav.links">
 		<a href="{{link.URL}}">{{link.linkName}}</a>
 	</div>
 </div>
+
 
 <div ng-controller="contentController as content"></div>
 
@@ -27,7 +30,7 @@
 
 <!--scripts go here-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-<!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
 <script src="js/controllers.js"></script>
 
 
