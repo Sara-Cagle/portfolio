@@ -1,16 +1,10 @@
-/*angular.module('PortfolioApp.controllers', []).
-controller('portfolioController', function($scope) {
-    //$scope.driversList = [];
-});*/
+angular.module('PortfolioApp', ['ngRoute'])
 
-var app = angular.module('PortfolioApp', []); //'ngRoute' is gonna go in the brackets
-
-app.controller('contentController', [function() {
-
-}]);
+.controller('contentController', [function($route, $routeParams) {
+}])
 
 
-app.controller('navController', [function() {
+.controller('navController', [function($route, $routeParams) {
 	this.links =[
 		{linkName: 'About',
 		URL: '/about',
@@ -22,4 +16,23 @@ app.controller('navController', [function() {
 		URL: '/projects',
 		}
 	]
-}]);
+}])
+
+.config(function($routeProvider) { //routing needs to be on a server in order to run
+	$routeProvider
+	.when('/',{
+		templateUrl: 'index.html',
+	})
+	.when('/about', {
+	templateUrl: 'views/about.html',
+	//controller: 'navController',
+	})
+	.when('#/resume', {
+	templateUrl: 'views/resume.html',
+	//controller: 'navController'
+	})
+	.when('#/projects', {
+	templateUrl: 'views/project.html',
+	//controller: 'navController'
+	});
+})
