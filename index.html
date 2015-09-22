@@ -5,6 +5,8 @@
 	<title>
 		Sara Cagle Portfolio
 	</title>
+
+<link rel="stylesheet" type="text/css" href="styles/mainstyle.css" media="screen" />
 </head>
 <body>
 <!--nav goes across the top--> <!--about, resume, projects-->
@@ -12,13 +14,18 @@
 <!--within projects we have a sub menu with each project and those scroll as views-->
 <!--can we have views within views? Yes! You can..-->
 
-	<p>Hello world!</p>
-	<!--div ng-view></div-->
+<div class="banner"><!--we put the banner here--></div>
+
 <div ng-controller="navController as nav" >
 	<div ng-repeat="link in nav.links">
 		<a href="{{link.URL}}">{{link.linkName}}</a>
 	</div>
 </div>
+
+<!--content will go here-->
+	<p>Hello world! I'm on the index.html!</p>
+	<div ng-view></div>
+
 
 
 <div ng-controller="contentController as content"></div>
