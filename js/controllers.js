@@ -21,18 +21,18 @@ angular.module('PortfolioApp', ['ngRoute'])
 .config(function($routeProvider) { //routing needs to be on a server in order to run
 	$routeProvider
 	.when('/',{
-		templateUrl: 'index.html',
+		templateUrl: 'views/about.html',
 	})
 	.when('/about', {
 	templateUrl: 'views/about.html',
-	//controller: 'navController',
+	controller: 'contentController',
 	})
 	.when('#/resume', {
 	templateUrl: 'views/resume.html',
-	//controller: 'navController'
+	controller: 'contentController'
 	})
 	.when('#/projects', {
 	templateUrl: 'views/project.html',
-	//controller: 'navController'
+	controller: 'contentController'
 	});
 })

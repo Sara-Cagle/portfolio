@@ -5,8 +5,33 @@
 	<title>
 		Sara Cagle Portfolio
 	</title>
+<style>
+body {
+    background-color: #d0e4fe;
+}
 
-<link rel="stylesheet" type="text/css" href="styles/mainstyle.css" media="screen" />
+p {
+	color: #ff0000;
+}
+
+.banner{
+	height: 100px; /*we can only use percentage height when there is a parent element w a specified height*/
+	background-color: purple;
+}
+
+.nav{
+	background-color: pink;
+	position: absolute;
+}
+
+.link{
+	display:inline; /*this is what makes them horizontal*/
+	padding: 10px;
+	width: 30%;
+}
+
+</style>
+<link href="./styles/mainStyle.css" rel="stylesheet" type="text/css"  />
 </head>
 <body>
 <!--nav goes across the top--> <!--about, resume, projects-->
@@ -14,10 +39,14 @@
 <!--within projects we have a sub menu with each project and those scroll as views-->
 <!--can we have views within views? Yes! You can..-->
 
-<div class="banner"><!--we put the banner here--></div>
+<!--responsive design starts from the smallest view first and then builds up-->
 
-<div ng-controller="navController as nav" >
-	<div ng-repeat="link in nav.links">
+
+
+<div class="banner">banner is here<!--we put the banner here--></div>
+
+<div class="nav" ng-controller="navController as nav" >
+	<div class="link" ng-repeat="link in nav.links">
 		<a href="{{link.URL}}">{{link.linkName}}</a>
 	</div>
 </div>
