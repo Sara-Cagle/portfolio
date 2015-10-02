@@ -7,13 +7,13 @@ angular.module('PortfolioApp', ['ngRoute'])
 .controller('navController', [function($route, $routeParams) {
 	this.links =[
 		{linkName: 'About',
-		URL: '/about',
+		URL: '#/about',
 		},
 		{linkName: 'Resume',
-		URL: '/resume',
+		URL: '#/resume',
 		},
 		{linkName: 'Projects',
-		URL: '/projects',
+		URL: '#/projects',
 		}
 	]
 }])
@@ -27,11 +27,11 @@ angular.module('PortfolioApp', ['ngRoute'])
 	templateUrl: 'views/about.html',
 	controller: 'contentController',
 	})
-	.when('#/resume', {
+	.when('/resume', {
 	templateUrl: 'views/resume.html',
 	controller: 'contentController'
 	})
-	.when('#/projects', {
+	.when('/projects', {
 	templateUrl: 'views/project.html',
 	controller: 'contentController'
 	});

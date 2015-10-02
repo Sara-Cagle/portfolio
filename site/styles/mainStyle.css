@@ -1,0 +1,24 @@
+body {
+    background-color: #d0e4fe;
+}
+
+p {
+	color: #ff0000;
+}
+
+.banner{
+	height: 100px; /*we can only use percentage height when there is a parent element w a specified height*/
+	background-color: purple;
+}
+
+.nav{
+	background-color: pink;
+	position: absolute;
+}
+
+.link{
+	display:inline; /*this is what makes them horizontal*/
+	padding: 10px;
+	width: 30%;
+}
+
