@@ -2,14 +2,37 @@
 <html ng-app="PortfolioApp" >
 <head>
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>
 		Sara Cagle Portfolio
 	</title>
 
 <link href="styles/mainStyle.css" rel="stylesheet">
 <link href="styles/resume.css" rel="stylesheet">
+
 </head>
-<body>
+<body id="page-top">
+<div id="content">
+
+
+<nav class="newnavbar">
+	<a href="#page-top"> <!--links the entire bar to flow back to top--> <!--class="navbar-brand page-scroll" -->    
+        <p>Sara Cagle</p>
+    </a>
+
+        <ul ng-controller="navController as nav" id="menu"> <!--class="nav navbar-nav" -->
+            <li ng-repeat="link in nav.links">
+                <a class="nav-link" href="{{link.URL}}" onclick='closeNav()'>{{link.linkName}} </a>
+            </li>
+        </ul>
+    <label for="show-menu" class="show-menu" id="show-menu"><img src="/images/menu.svg" alt="Menu"></label>
+	<!--input type="checkbox" id="show-menu" role="button"-->
+</nav>
+<img src="images/qilin.jpg" />
+
+
+
+
 <!--nav goes across the top--> <!--about, resume, projects-->
 <!--each of these sections is its own thing, its own view-->
 <!--within projects we have a sub menu with each project and those scroll as views-->
@@ -19,32 +42,33 @@
 
 
 
-<div class="banner">banner is here<!--we put the banner here--><br />
-Contact: scagle6@gatech.edu, WeChat, LinkedIn, GitHub, Atlanta, GA</div>
+<!--<div class="banner">banner is here<!--we put the banner here--<br />
+Contact: scagle6@gatech.edu, WeChat, LinkedIn, GitHub, Atlanta, GA</div-->
 
-<div class="nav" ng-controller="navController as nav" >
-	<div class="link" ng-repeat="link in nav.links">
-		<a href="{{link.URL}}">{{link.linkName}}</a>
-	</div>
-</div>
+
 
 <!--content will go here-->
-	<p>Hello world! I'm on the index.html!</p>
-	<div ng-view></div>
+<div ng-view></div>
 
 
 
 <div ng-controller="contentController as content"></div>
 
 
+
+
 <ng-include src="'templates/footer.html'"></ng-include>
+</div> <!--content div-->
 
 </body>
 
 <!--scripts go here-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
+
+
 <script src="js/controllers.js"></script>
+<script src="js/script.js"></script>
 
 
 </html>

@@ -1,20 +1,134 @@
-body {
-    background-color: #d0e4fe;
+*{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-p {
-	color: #ff0000;
+body {
+    background-color: #000000;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    position: auto;
+}
+p {
+	color: white;
+}
+
+.newnavbar{
+	position: fixed;
+	margin:auto;
+	width:80%;
+	opacity: 0.6;
+	background:#2f3036;
+    filter: alpha(opacity=60); /*for IE8, bless their heart*/
+
+}
+.newnavbar p{
+	float:left;
+
+}
+
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+	float:right;
+}
+
+
+/*Style for menu links*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+}
+
+
+
+/*Hover state for top level links*/
+li:hover a {
+	background: #19c589;
+}
+
+
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+#show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	margin-left: 90%; /*makes sure the icon is way to the right*/
+	padding: 10px 0;
+	display: none;
+
+}
+
+
+@media screen and (max-width : 767px){
+	/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	#show-menu {
+		display:block;
+	}
+	.newnavbar{
+	opacity: 1;
+	background:#2f3036;
+    filter: alpha(opacity=100); /*for IE8, bless their heart*/
+    border-bottom: 1px solid white;
+	}
+}
+
+
+
+
+
+/*----------------------------------------------------------------*/
+
+#content{
+	margin: auto;
+	width: 80%;
+	max-width: 3052px;
+	background-color: #2f3036;
+}
+
+
+
 
 .banner{
 	height: 100px; /*we can only use percentage height when there is a parent element w a specified height*/
 	background-color: purple;
 }
 
-.nav{
-	background-color: pink;
-	position: absolute;
-}
 
 .link{
 	display:inline; /*this is what makes them horizontal*/
@@ -22,3 +136,9 @@ p {
 	width: 30%;
 }
 
+@media (min-width:768px){ /*the large view of the page starts at 768 and greater*/
+
+}
+@media (max-width: 767px){ /*compressed view of the page starts at 767 and less*/
+
+}
