@@ -163,13 +163,17 @@ ul li a:hover + .hidden, .hidden:hover {
 
 /*----------------------------------------------------------------*/
 
-
+.slide-contaner {
+	height:auto;
+	position:relative;
+}
 .slide {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
+	color:white;
 }
 .slide.ng-enter,
 .slide.ng-leave {
@@ -178,13 +182,17 @@ ul li a:hover + .hidden, .hidden:hover {
 }
 .slide.ng-enter {
     left: 100%;
+	height: auto;
 }
 .slide.ng-enter-active {
     left: 0;
+	height:auto;
 }
 .slide.ng-leave {
     left: 0;
+	height: 0;
 }
 .slide.ng-leave-active {
     left: -100%;
+	height: 0;
 }
