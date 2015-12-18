@@ -159,7 +159,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
 
 
-/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------
 #content .slide {
     position:relative;
     left: 0;
@@ -183,4 +183,4 @@ ul li a:hover + .hidden, .hidden:hover {
 }
 #content .slide.ng-leave-active {
     opacity: 0;
-}
+}*/
