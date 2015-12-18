@@ -1,4 +1,4 @@
-angular.module('PortfolioApp', ['ngRoute'])
+angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 
 .controller('contentController', [function($route, $routeParams) {
 }])

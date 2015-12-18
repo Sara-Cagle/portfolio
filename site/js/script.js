@@ -1,6 +1,25 @@
-var verticalPosition = window.pageYOffset | document.body.scrollTop;
-var screenWidth = screen.width;
 
+var screenWidth = window.innerWidth;
+var verticalPosition = window.pageYOffset | document.body.scrollTop;
+
+navTransparencyChange = function(){
+	if(screenWidth >=768){
+		console.log("screen width is:"+window.innerWidth);
+		verticalPosition = window.pageYOffset | document.body.scrollTop;
+		var element = document.getElementById('newnavbar');
+		if(verticalPosition >=30){
+			element.style.opacity = "1";
+			element.style.filter  = 'alpha(opacity=100)';
+			console.log(verticalPosition);
+		}
+		else{
+			element.style.opacity = "0.6";
+			element.style.filter  = 'alpha(opacity=60)';
+
+			console.log("scrolled!");
+		}
+	}
+}
 /*
 On page resize:
 -check if you're expanding into a big screen, and if so, make sure the menu is toggled on
