@@ -44,6 +44,7 @@ navTransparencyChange = function(){
 	else{
 		element.style.opacity = "1";
 		element.style.filter  = 'alpha(opacity=100)';
+		element.style.borderBottom= "1px solid white";
 	}
 }
 
