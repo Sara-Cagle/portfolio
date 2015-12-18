@@ -2,31 +2,49 @@
 var screenWidth = window.innerWidth;
 var verticalPosition = window.pageYOffset | document.body.scrollTop;
 
+
+/**
+* Event Listener for resizing the window to help ensure the menu is toggled correctly for the window size.
+*/
+window.addEventListener('resize', function(event){
+	screenWidth = window.innerWidth;
+	if(document.getElementById('menu').style.display != "inline"){
+		if(screenWidth>=768){
+			document.getElementById('menu').style.display = "inline";
+		}
+	}
+	else{
+		if(screenWidth<768){
+			document.getElementById('menu').style.display = "none";
+		}
+	}
+});
+
+
+/**
+* Changes the transparancy of the nav menu when the page is scrolled up or down.
+* Has a few mini bugs, but gets the job done for the most part.
+*/
 navTransparencyChange = function(){
+	screenWidth = window.innerWidth;
+	var element = document.getElementById('newnavbar');
 	if(screenWidth >=768){
-		console.log("screen width is:"+window.innerWidth);
 		verticalPosition = window.pageYOffset | document.body.scrollTop;
-		var element = document.getElementById('newnavbar');
 		if(verticalPosition >=30){
 			element.style.opacity = "1";
 			element.style.filter  = 'alpha(opacity=100)';
-			console.log(verticalPosition);
 		}
 		else{
 			element.style.opacity = "0.6";
 			element.style.filter  = 'alpha(opacity=60)';
-
-			console.log("scrolled!");
 		}
 	}
+	else{
+		element.style.opacity = "1";
+		element.style.filter  = 'alpha(opacity=100)';
+	}
 }
-/*
-On page resize:
--check if you're expanding into a big screen, and if so, make sure the menu is toggled on
--check if you're changing the height of the image, and toggle that variable, and call the change background color transparency function if necessary
-*/
 
-//document.getElementById("myImg").height = "300";
 
 /**
 * Toggles the menu on the click of the hamburger 'more' icon. Works via CSS/
@@ -40,29 +58,3 @@ document.getElementById('show-menu').onclick = function(){
 		document.getElementById('menu').style.display = "block";
 	}
 };
-
-/**
-* Initially, this would "close" the toggled menu by hiding it once you clicked a nav button.
-* However, since this was just CSS, it would hide the menu even on expanded view. For simplicity, we just won't use this.
-* If users want to continue browsing after they click a link, they'll simply have to close the hamburger menu first.
-*/
-/*closeNav = function(){
-	if(document.getElementById('menu').style.display === "block"){
-		document.getElementById('menu').style.display = "none";
-	}
-};*/
-
-/*window.onscroll=function(){changeMenu()}
-
-function changeMenu()
-{
-    
-
-    // At specifiv position do what you want 
-    if(scrollBarPosition == 0) {
-        document.getElementById('status').innerHTML = "User is on top of the page, position=" + scrollBarPosition;
-    }
-    else {
-        document.getElementById('status').innerHTML = "User is not on top of the page, position="  + scrollBarPosition;
-    }
-}*/
