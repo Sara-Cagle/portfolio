@@ -30,13 +30,15 @@ navTransparencyChange = function(){
 	var element = document.getElementById('newnavbar');
 	if(screenWidth >=768){
 		verticalPosition = window.pageYOffset | document.body.scrollTop;
-		if(verticalPosition >=30){
+		if(verticalPosition >=50){
 			element.style.opacity = "1";
 			element.style.filter  = 'alpha(opacity=100)';
+			element.style.borderBottom= "1px solid white";
 		}
 		else{
 			element.style.opacity = "0.6";
 			element.style.filter  = 'alpha(opacity=60)';
+			element.style.borderBottom= "none";
 		}
 	}
 	else{

@@ -18,17 +18,24 @@ p {
 }
 
 #newnavbar{
+	/*background: rgb(47, 48, 54); /* Fallback for older browsers without RGBA-support 
+    background: rgba(47, 48, 54, 0.6);*/
 	position: fixed;
 	margin:auto;
 	width:80%;
-	opacity: 0.6;
 	background:#2f3036;
+	opacity: 0.6;
     filter: alpha(opacity=60); /*for IE8, bless their heart*/
+    z-index: 999;
 
 }
 #newnavbar p{
 	float:left;
-
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-variant: small-caps;
+	padding: 5px;
+	line-height: 37px;
 }
 
 /*Strip the ul of padding and list styling*/
@@ -46,6 +53,8 @@ li {
 
 /*Style for menu links*/
 li a {
+	/*background: rgb(47, 48, 54); /* Fallback for older browsers without RGBA-support 
+    background: rgba(47, 48, 54, 0.6);*/
 	display:block;
 	min-width:140px;
 	height: 50px;
@@ -53,7 +62,7 @@ li a {
 	line-height: 50px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #fff;
-	background: #2f3036;
+	/*background: #2f3036;*/
 	text-decoration: none;
 }
 
@@ -102,8 +111,8 @@ ul li a:hover + .hidden, .hidden:hover {
 	}
 	#newnavbar{
 	opacity: 1;
-	background:#2f3036;
-    filter: alpha(opacity=100); /*for IE8, bless their heart*/
+	filter: alpha(opacity=100);
+	/*background:#2f3036;*/
     border-bottom: 1px solid white;
 	}
 }
