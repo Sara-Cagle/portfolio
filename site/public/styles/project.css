@@ -1,19 +1,22 @@
+/*
+* "View on Github" buttons on the Project page
+*/
 .gitHubButton{
+	position: relative;
+    right: 5px;
 	background-color: #19c589;
-	border-radius: 50px;
-	position: absolute;
+	border-radius: 10px;
 	text-align: center;
 	float: right;
 	width: 140px;
-	height: 50px;
-	bottom: 10px;
-	right: 50px;
+	height: 30px;
 	font-variant: small-caps;
-	display:block;
 }
 .gitHubButton a{
+	display:block;
 	color: white;
-	text-decoration: none;	
+	text-decoration: none;
+	line-height: 30px;
 }
 .gitHubButton:hover {
 	background-color: white;
@@ -21,6 +24,15 @@
 	display: block;
 }
 .gitHubButton:hover a{
+	display:block;
 	background-color: white;
 	color: #19c589;
+	border-radius: 10px;
+}
+/*
+* A fix for the buttons, by floating it inside this element, it won't sit on top of the text.
+*/
+.buttonHolder{
+	height: 30px; /*must be same height as the gitHubButton*/
+	width:100%;
 }

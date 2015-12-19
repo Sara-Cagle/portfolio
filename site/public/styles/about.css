@@ -10,6 +10,7 @@
 	padding-bottom:20px;
 	width: 90%;
 	margin: auto;
+	clear: both;
 }
 
 .groupedText b{
@@ -19,4 +20,5 @@
 	padding-right: 5px;
 	padding-bottom: 5px;
 	position: relative;
+
 }
