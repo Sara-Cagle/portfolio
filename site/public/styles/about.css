@@ -1,0 +1,22 @@
+.boxOfText{
+	margin: auto;
+	width: 80%;
+	position:relative;
+	padding: 30px;
+	text-align: center;
+}
+
+.groupedText{
+	padding-bottom:20px;
+	width: 90%;
+	margin: auto;
+}
+
+.groupedText b{
+	color: #E3794F;
+	/*color: #D0562D;*/
+	font-size: 1.2em;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	position: relative;
+}
