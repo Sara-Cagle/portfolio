@@ -165,6 +165,43 @@ a:hover{
 }
 
 
+header {
+	/*position:fixed;*/
+	max-height: auto;
+	height: 5000px;
+	/*width: 80%;*/
+	margin: auto;
+	z-index: 900;/*
+    background-color: #0683c9;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;*/
+    width: 80%;
+    /*height: 150px;*/
+    overflow: hidden;
+    position: fixed;
+    /*top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #0683c9;*/
+    -webkit-transition-property: height;
+    -moz-transition-property: height;
+    /*-ms-transition: height 0.9s;
+    -o-transition: height 0.9s;*/
+    transition-property: height;
+    -webkit-transition-duration: 4s;
+    transition-duration: 4s;
+}
+
+header.smaller{
+	height:0px;
+	max-height:0px;
+}
+
+
+
 /*----------------------------------------------------------------*/
 /*
 * Angular-related CSS for slide in and out of page-view content

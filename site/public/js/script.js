@@ -61,3 +61,24 @@ document.getElementById('show-menu').onclick = function(){
 		document.getElementById('menu').style.display = "block";
 	}
 };
+
+
+
+
+function init() {
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            shrinkOn = 300,
+            header = document.querySelector("header");
+        if (distanceY > shrinkOn) {
+            classie.add(header,"smaller");
+            console.log("shrink to none");
+        } else {
+            if (classie.has(header,"smaller")) {
+                classie.remove(header,"smaller");
+                console.log("back to normal");
+            }
+        }
+    });
+}
+window.onload = init();

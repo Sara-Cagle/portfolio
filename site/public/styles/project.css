@@ -5,7 +5,7 @@
 	position: relative;
     right: 5px;
 	background-color: #19c589;
-	border-radius: 10px;
+	border-radius: 6px;
 	text-align: center;
 	float: right;
 	width: 140px;
@@ -27,7 +27,7 @@
 	display:block;
 	background-color: white;
 	color: #19c589;
-	border-radius: 10px;
+	border-radius: 6px;
 }
 /*
 * A fix for the buttons, by floating it inside this element, it won't sit on top of the text.
@@ -35,4 +35,5 @@
 .buttonHolder{
 	height: 30px; /*must be same height as the gitHubButton*/
 	width:100%;
+	position: inline;
 }
