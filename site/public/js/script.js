@@ -64,11 +64,13 @@ document.getElementById('show-menu').onclick = function(){
 
 
 
-
-function init() {
+/*
+* Function to help run the image banner transition on-scroll, but since the transitions are iffy, we are leaving it out.
+*/
+/*function init() {
     window.addEventListener('scroll', function(e){
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 300,
+            shrinkOn = 40,
             header = document.querySelector("header");
         if (distanceY > shrinkOn) {
             classie.add(header,"smaller");
@@ -81,4 +83,4 @@ function init() {
         }
     });
 }
-window.onload = init();
+window.onload = init();*/

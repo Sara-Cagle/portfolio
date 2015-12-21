@@ -2,7 +2,7 @@
 	padding: 0px;
 	border: 0px;
 	margin: 0px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Lora', serif;
 }
 
 body {
@@ -42,7 +42,7 @@ p{
 }
 #newnavbar p{
 	float:left;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
 	font-variant: small-caps;
 	padding: 5px;
@@ -73,7 +73,7 @@ p{
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: white;
 	/*background: #2f3036;*/
 	text-decoration: none;
@@ -89,9 +89,8 @@ p{
 
 
 
-/*Style 'show menu' label button and hide it by default*/
+/*Style hamburger "more" button for compressed views, hidden by default*/
 #show-menu {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	margin-left: 90%; /*makes sure the icon is way to the right*/
 	padding: 10px 0;
@@ -102,16 +101,16 @@ p{
 
 @media screen and (max-width : 767px){
 	/*Make dropdown links appear inline*/
-	ul {
+	#newnavbar ul {
 		position: static;
 		display: none;
 	}
 	/*Create vertical spacing*/
-	li {
+	#newnavbar li {
 		margin-bottom: 1px;
 	}
 	/*Make all menu links full width*/
-	ul li, li a {
+	#newnavbar ul li, li a {
 		width: 100%;
 	}
 	/*Display 'show menu' link*/
@@ -164,42 +163,33 @@ a:hover{
 	color: white;
 }
 
-
-header {
-	/*position:fixed;*/
-	max-height: auto;
-	height: 5000px;
-	/*width: 80%;*/
-	margin: auto;
-	z-index: 900;/*
-    background-color: #0683c9;
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    -ms-transition: height 0.3s;
-    -o-transition: height 0.3s;
-    transition: height 0.3s;*/
-    width: 80%;
-    /*height: 150px;*/
-    overflow: hidden;
-    position: fixed;
-    /*top: 0;
-    left: 0;
-    z-index: 999;
-    background-color: #0683c9;*/
-    -webkit-transition-property: height;
-    -moz-transition-property: height;
-    /*-ms-transition: height 0.9s;
-    -o-transition: height 0.9s;*/
-    transition-property: height;
-    -webkit-transition-duration: 4s;
-    transition-duration: 4s;
+footer{
+	border-top: 1px solid black;
 }
 
+footer p{
+	text-align: center;
+	font-size: 0.7em;
+	font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/*
+* Some animations to handle shrinking the banner on-scroll, but they don't work 100%, so we'll just leave them out.
+*/
+/*header {
+	max-height: 5000px;
+	height: auto;
+	z-index: 900;
+    width: 100%;
+    transition: max-height 4s ease-in;
+}
 header.smaller{
-	height:0px;
 	max-height:0px;
+	transition: max-height 4s ease-out;
+	overflow: hidden;
 }
-
+*/
 
 
 /*----------------------------------------------------------------*/

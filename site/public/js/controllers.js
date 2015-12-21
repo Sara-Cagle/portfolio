@@ -4,16 +4,23 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 }])
 
 
+/*
+* Due to the CSS, these actually are loaded into the page from right to left (backwards), so put the most important links
+* at the bottom of this list, so they will appear closest to the left.
+*/
 .controller('navController', [function($route, $routeParams) {
 	this.links =[
-		{linkName: 'About',
-		URL: '#/about',
-		},
 		{linkName: 'Resume',
+		URL: '#'
+		},
+		{linkName: 'Experience',
 		URL: '#/resume',
 		},
 		{linkName: 'Projects',
 		URL: '#/projects',
+		},
+		{linkName: 'About',
+		URL: '#/about',
 		}
 	]
 }])

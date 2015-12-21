@@ -1,16 +1,47 @@
-#objective{
-	display: block;
+/*
+* The education section
+*/
+.edu{
+border-bottom: 1px solid black;
 }
 
-#edu{
-background-color:orange;
+.location{
+	font-size: 0.8em;
+	display: inline;
 }
 
-#skills{
+.time{
+	font-size: 0.8em;
+	float: right;
+	color: #E3794F;
 }
 
-#exp{
+/*
+* Each little 'experience block' of a job, place, time, and description
+*/
+.exp{
 }
 
-#international{
+
+/*
+* Currently used only on the resume page, so the settings are used to match the 'groupedText' each chunk uses
+*/
+h2{
+	width: 90%; /*Used to match the groupedText */
+	margin: auto;  /*Used to match the groupedText */
+	font-size: 1.7em; /*default h2 is 1.5em*/
+	padding-bottom: 10px;
+}
+
+/*
+* Resets the list formatting that got stripped for the nav menu
+*/
+ul { 
+   list-style-type: none; /*this is normally disc*/
+   list-style-position: inside; 
+}
+ul ul, ol ul { 
+   list-style-type: none;  /*this is normally disc*/
+   list-style-position: inside; 
+   margin-left: 25px;  /*this is normally 15px*/
 }

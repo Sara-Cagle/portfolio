@@ -3,14 +3,14 @@
 	width: 80%;
 	position:relative;
 	padding: 30px;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .groupedText{
 	padding-bottom:20px;
 	width: 90%;
 	margin: auto;
-	clear: both;
+	/*clear: both;*/ /* This was causing some weird issues with the angular scrolling animation, so I commented it out*/
 }
 
 .groupedText b{
