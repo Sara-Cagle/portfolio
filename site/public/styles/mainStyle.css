@@ -8,11 +8,45 @@
 body {
     background-color: #000000;
 }
-img {
+
+/*header{
+	background-image: url('/images/qilin.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100% auto;
+}*/
+/*header img{
+	max-width:20%;
+	height:auto;
+	position: auto;
+	border-radius: 50%;
+}*/
+
+header{
+	position: relative;
+}
+
+
+/*
+* The original CSS for the banner image before it went into the header background, just in case we need to bring it back
+*/
+.banner {
     max-width: 100%;
     height: auto;
-    position: auto;
+    /*position: absolute;*/
+    
 }
+
+.face{
+	max-width: 20%;
+	height: auto;
+	border-radius: 50%;
+	border: 0.5em solid white;
+	z-index: 999;
+	position: absolute;
+	top: 30px;
+}
+
 h1{
 	color: white;
 	text-align: center;

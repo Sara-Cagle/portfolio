@@ -22,6 +22,35 @@ border-bottom: 1px solid black;
 .exp{
 }
 
+.resumeButton{
+	display: inline ;
+	background-color: #19c589;
+	border-radius: 6px;
+	text-align: center;
+	width: 140px;
+	height: 30px;
+	font-variant: small-caps;
+	padding:3px;
+}
+.resumeButton a{
+	display:inline;
+	color: white;
+	text-decoration: none;
+	background-color:#19c589;
+	/*line-height: 30px;*/
+}
+.resumeButton:hover {
+	background-color: white;
+	color: #19c589;
+	display: inline;
+}
+.resumeButton:hover a{
+	display:inline;
+	background-color: white;
+	color: #19c589;
+	border-radius: 6px;
+}
+
 
 /*
 * Currently used only on the resume page, so the settings are used to match the 'groupedText' each chunk uses
