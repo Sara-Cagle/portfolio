@@ -62,6 +62,38 @@ document.getElementById('show-menu').onclick = function(){
 	}
 };
 
+/*window.onload = function(){
+	document.getElementById('hello').onclick = function(){
+		var element = document.getElementById('wechatQR');
+		console.log("display type is: "+element.style.display);
+		if(element.style.display=="none"){
+			element.style.display="visible";
+			console.log("changed to visible");
+
+		}
+		else{
+			element.style.display="none";
+			console.log("changed to hidden");
+		}
+	}
+};*/
+
+
+/*
+* Anchors down the page so we can scroll to content faster if on a large screen.
+* Used when any of the buttons are clicked.
+* Smooth scrolling only works in FireFox, unfortunately, otherwise it just jumps.
+*/
+/*var links = document.getElementsByClassName('clickForScroll'){
+	for(var i=0; i<links.length; i++){
+		links[i].onclick=function(){
+			document.getElementById('scrollTo').scrollIntoView({behavior: "smooth"});
+		};
+	}
+}*/
+/*document.getElementById('menu').onclick = function(){
+	document.getElementById('scrollTo').scrollIntoView({behavior: "smooth"});
+};*/
 
 
 /*
@@ -84,3 +116,4 @@ document.getElementById('show-menu').onclick = function(){
     });
 }
 window.onload = init();*/
+

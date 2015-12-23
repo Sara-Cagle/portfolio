@@ -1,8 +1,5 @@
 angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 
-.controller('contentController', [function($route, $routeParams) {
-}])
-
 
 /*
 * Due to the CSS, these actually are loaded into the page from right to left (backwards), so put the most important links
@@ -10,11 +7,10 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 */
 .controller('navController', [function($route, $routeParams) {
 	this.links =[
-		{linkName: 'Resume',
-		URL: '#'
-		},
+		{linkName: 'Contact',
+		URL: '#/contact'},
 		{linkName: 'Experience',
-		URL: '#/resume',
+		URL: '#/experience',
 		},
 		{linkName: 'Projects',
 		URL: '#/projects',
@@ -25,13 +21,39 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 	]
 }])
 
-.controller('contentController', [function($route, $routeParams) {
-	var links = document.getElementsByClassName("nav-link");
-	for (var i = 0; i < links.length; ++i) {
-		links[i].onclick = function(){
-   			document.getElementById('slide').scrollIntoView();
-  		}
- 	}
+.controller('contentController', ['$scope', function($scope, $route, $routeParams) {
+	$scope.openModal = function(){
+		var element = document.getElementById('wechatQR');
+			console.log("display type is: "+element.style.display);
+			if(element.style.display=="none"){
+				element.style.display="visible";
+				console.log("changed to visible");
+
+			}
+			else{
+				element.style.display="none";
+				console.log("changed to hidden");
+			}
+	}
+
+	/*angular.element(document).ready(function () {
+		document.getElementById('hello').onclick = function(){
+			var element = document.getElementById('wechatQR');
+			console.log("display type is: "+element.style.display);
+			if(element.style.display=="none"){
+				element.style.display="visible";
+				console.log("changed to visible");
+
+			}
+			else{
+				element.style.display="none";
+				console.log("changed to hidden");
+			}
+		};
+	});*/
+
+
+
 }])
 
 .config(function($routeProvider) { //routing needs to be on a server in order to run
@@ -43,12 +65,16 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 	templateUrl: 'views/about.html',
 	controller: 'contentController',
 	})
-	.when('/resume', {
-	templateUrl: 'views/resume.html',
+	.when('/experience', {
+	templateUrl: 'views/experience.html',
 	controller: 'contentController'
 	})
 	.when('/projects', {
 	templateUrl: 'views/project.html',
 	controller: 'contentController'
+	})
+	.when('/contact', {
+	templateUrl: 'views/contact.html',
+	controller: 'contentController',
 	});
 })

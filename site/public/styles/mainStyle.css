@@ -177,7 +177,24 @@ footer p{
 	font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.contactBlock{
+	text-align: center;
+}
 
+.fa{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#wechatQR{
+	visibility: ;
+	padding: 10px;
+	border: 2px solid white;
+	max-width: 240px;
+	margin: auto;
+	z-index:999;
+	position: fixed;
+}
 
 /*
 * For compressed screens and smaller
