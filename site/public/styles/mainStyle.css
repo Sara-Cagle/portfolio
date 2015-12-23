@@ -9,56 +9,38 @@ body {
     background-color: #000000;
 }
 
-header{
-	background-image: url('/images/qilin.jpg');
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 100% auto;
-	width: 100%;
-	height: auto;
-	max-height: 3052px;
-}
-/*header img{
-	max-width:20%;
-	height:auto;
-	position: auto;
-	border-radius: 50%;
-}*/
-
-/*header{
-	position: relative;
-}*/
-
 
 /*
-* The original CSS for the banner image before it went into the header background, just in case we need to bring it back
+* Contains the face bubble and banner
 */
-/*.banner img{
-    max-width: 100%;
-    height: auto;
-    /*position: absolute;
-    
-}*/
-
-header img{
-	/*transform:translateY(50%);
-	transform:translateX(50%);*/
-	max-width: 20%;
-	margin: auto;
-	/*width: 10%;*/
-	height: auto;
-	display: block;
-	border-radius: 50%;
-	border: 0.5em solid white;
-	/*z-index: 999;
-	/*float:right;*/
-	/*position: absolute;
-	right: 50%;*/
+header{
+	position: relative;
 }
 
+/*
+* My face bubble, sits absolutely compared to the header it sits within
+*/
+header .face{
+	margin:auto;
+	height:100px;
+	width: 100px;
+	display:block;
+	border-radius: 50%;
+	border: 0.5em solid white;
+	position: absolute;
+	top: 50%;
+	left:0;
+	right:0;
+}
 
-/*make your banner a div with the background image of the dragon thing. 
-then put your face as an img inside that div with transform: translateX(50%) translateY(50%);*/
+/*
+* The banner is designed to scale based on width
+*/
+header .banner{
+	width:100%;
+	height: auto;
+	z-index:-1;
+}
 
 h1{
 	color: white;
@@ -167,10 +149,16 @@ p{
 	#newnavbar{
 	opacity: 1;
 	filter: alpha(opacity=100);
+	width: 100%;
 	/*background:#2f3036;*/
     border-bottom: 1px solid white;
 	}
+	#content{
+		width:100%;
+		min-width:100%; /*This shouldnt be needed, but it's not working without it*/
+	}	
 }
+
 
 @media (min-width:768px){
 	#menu{
@@ -195,10 +183,6 @@ p{
 	background-color: #2f3036;
 	position:relative;
 	overflow: hidden;
-	/*background-image: url('/images/qilin.jpg');
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 100% auto;*/
 }
 
 a:link, a:active, a:visited{
