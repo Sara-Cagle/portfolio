@@ -9,12 +9,15 @@ body {
     background-color: #000000;
 }
 
-/*header{
+header{
 	background-image: url('/images/qilin.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 100% auto;
-}*/
+	width: 100%;
+	height: auto;
+	max-height: 3052px;
+}
 /*header img{
 	max-width:20%;
 	height:auto;
@@ -22,30 +25,40 @@ body {
 	border-radius: 50%;
 }*/
 
-header{
+/*header{
 	position: relative;
-}
+}*/
 
 
 /*
 * The original CSS for the banner image before it went into the header background, just in case we need to bring it back
 */
-.banner {
+/*.banner img{
     max-width: 100%;
     height: auto;
-    /*position: absolute;*/
+    /*position: absolute;
     
-}
+}*/
 
-.face{
+header img{
+	/*transform:translateY(50%);
+	transform:translateX(50%);*/
 	max-width: 20%;
+	margin: auto;
+	/*width: 10%;*/
 	height: auto;
+	display: block;
 	border-radius: 50%;
 	border: 0.5em solid white;
-	z-index: 999;
-	position: absolute;
-	top: 30px;
+	/*z-index: 999;
+	/*float:right;*/
+	/*position: absolute;
+	right: 50%;*/
 }
+
+
+/*make your banner a div with the background image of the dragon thing. 
+then put your face as an img inside that div with transform: translateX(50%) translateY(50%);*/
 
 h1{
 	color: white;
