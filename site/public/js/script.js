@@ -62,23 +62,6 @@ document.getElementById('show-menu').onclick = function(){
 	}
 };
 
-/*window.onload = function(){
-	document.getElementById('hello').onclick = function(){
-		var element = document.getElementById('wechatQR');
-		console.log("display type is: "+element.style.display);
-		if(element.style.display=="none"){
-			element.style.display="visible";
-			console.log("changed to visible");
-
-		}
-		else{
-			element.style.display="none";
-			console.log("changed to hidden");
-		}
-	}
-};*/
-
-
 /*
 * Anchors down the page so we can scroll to content faster if on a large screen.
 * Used when any of the buttons are clicked.
@@ -94,26 +77,4 @@ document.getElementById('show-menu').onclick = function(){
 /*document.getElementById('menu').onclick = function(){
 	document.getElementById('scrollTo').scrollIntoView({behavior: "smooth"});
 };*/
-
-
-/*
-* Function to help run the image banner transition on-scroll, but since the transitions are iffy, we are leaving it out.
-*/
-/*function init() {
-    window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 40,
-            header = document.querySelector("header");
-        if (distanceY > shrinkOn) {
-            classie.add(header,"smaller");
-            console.log("shrink to none");
-        } else {
-            if (classie.has(header,"smaller")) {
-                classie.remove(header,"smaller");
-                console.log("back to normal");
-            }
-        }
-    });
-}
-window.onload = init();*/
 

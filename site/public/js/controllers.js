@@ -22,19 +22,10 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 }])
 
 .controller('contentController', ['$scope', function($scope, $route, $routeParams) {
-	/*$scope.openModal = function(){
-		var element = document.getElementById('wechatQR');
-			console.log("display type is: "+element.style.visibility);
-			if(element.style.visibility==="hidden"){
-				return element.style.visibility="visible";
-				//console.log("changed to visible");
-
-			}
-			else{
-				return element.style.visibility="hidden";
-				//console.log("changed to hidden");
-			}
-	};*/
+	
+	/*
+	* For toggling the WeChat QR code modal.
+	*/
 	$scope.showModal = false;
 	$scope.openModal = function(){
 		$scope.showModal = !$scope.showModal;

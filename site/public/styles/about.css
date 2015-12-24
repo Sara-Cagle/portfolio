@@ -1,21 +1,25 @@
+/*
+* More centered on the page, to draw attention to it. Use sparsely.
+*/
 .boxOfText{
 	margin: auto;
 	width: 80%;
 	position:relative;
 	padding: 30px;
-	/*text-align: center;*/
 }
-
+/*
+* The groups of text you see throughout the website.
+*/
 .groupedText{
 	padding-bottom:20px;
 	width: 90%;
 	margin: auto;
-	/*clear: both;*/ /* This was causing some weird issues with the angular scrolling animation, so I commented it out*/
 }
-
+/*
+* Use bold as the header-type of each of these boxes, not for generic bold use.
+*/
 .groupedText b{
 	color: #E3794F;
-	/*color: #D0562D;*/
 	font-size: 1.2em;
 	padding-right: 5px;
 	padding-bottom: 5px;
