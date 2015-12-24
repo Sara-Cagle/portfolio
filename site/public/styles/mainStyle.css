@@ -187,13 +187,16 @@ footer p{
 }
 
 #wechatQR{
-	visibility: ;
 	padding: 10px;
 	border: 2px solid white;
 	max-width: 240px;
 	margin: auto;
-	z-index:999;
+	z-index:9999;
+	background-color: #2f3036;
 	position: fixed;
+	top:50%;
+	left:41%;
+	display:inline;
 }
 
 /*
@@ -318,3 +321,4 @@ header.smaller{
     left: -100%;
 	height: 0;
 }
+/*--------------------------------------------------------------------*/

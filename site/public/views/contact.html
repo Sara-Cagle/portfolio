@@ -4,14 +4,16 @@
 	And go ahead and email me at <a href="mailto:cagle.sara@gmail.com">Cagle.Sara@gmail.com</a><br /><br />
 	<a href="https://github.com/Sara-Cagle" title="GitHub"><i class="fa fa-github fa-3x"></i></a> 
 	<a href="http://www.linkedin.com/in/scagle" title="LinkedIn"><i class="fa fa-linkedin-square fa-3x"></i></a> 
-	<i class="fa fa-weixin fa-3x" title="WeChat (QR code)"></i>
+	<a href="" ng-click="openModal()"><i class="fa fa-weixin fa-3x" title="WeChat (QR code)"></i></a>
 
-	<div id="hello" ng-click="openModal()" >Click to open</div>
 
-	<div id="wechatQR">
-		Add me on WeChat. <br />
+
+<div id="wechatQR" ng-show="showModal" ng-click="openModal()">
+	Add me on WeChat. <br />
 		欢迎加我的微信。<br />
 		<img src="images/qrCode.png" />
-	</div>
+		(Click to close.)
+</div>
+
 
 </div>

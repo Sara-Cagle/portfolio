@@ -22,19 +22,24 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 }])
 
 .controller('contentController', ['$scope', function($scope, $route, $routeParams) {
-	$scope.openModal = function(){
+	/*$scope.openModal = function(){
 		var element = document.getElementById('wechatQR');
-			console.log("display type is: "+element.style.display);
-			if(element.style.display=="none"){
-				element.style.display="visible";
-				console.log("changed to visible");
+			console.log("display type is: "+element.style.visibility);
+			if(element.style.visibility==="hidden"){
+				return element.style.visibility="visible";
+				//console.log("changed to visible");
 
 			}
 			else{
-				element.style.display="none";
-				console.log("changed to hidden");
+				return element.style.visibility="hidden";
+				//console.log("changed to hidden");
 			}
-	}
+	};*/
+	$scope.showModal = false;
+	$scope.openModal = function(){
+		$scope.showModal = !$scope.showModal;
+	};
+
 }])
 
 .config(function($routeProvider) { //routing needs to be on a server in order to run
