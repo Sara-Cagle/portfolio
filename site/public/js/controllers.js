@@ -35,25 +35,6 @@ angular.module('PortfolioApp', ['ngRoute', 'ngAnimate'])
 				console.log("changed to hidden");
 			}
 	}
-
-	/*angular.element(document).ready(function () {
-		document.getElementById('hello').onclick = function(){
-			var element = document.getElementById('wechatQR');
-			console.log("display type is: "+element.style.display);
-			if(element.style.display=="none"){
-				element.style.display="visible";
-				console.log("changed to visible");
-
-			}
-			else{
-				element.style.display="none";
-				console.log("changed to hidden");
-			}
-		};
-	});*/
-
-
-
 }])
 
 .config(function($routeProvider) { //routing needs to be on a server in order to run
